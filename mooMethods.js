@@ -20,8 +20,8 @@ function updateScores() {
     let pTwoLiveCash = document.getElementById("pTwoLiveCash");
     pOneLiveScore.innerHTML = pOneScore;
     pTwoLiveScore.innerHTML = pTwoScore;
-    pOneLiveCash.innerHTML = pOne.cash;
-    pTwoLiveCash.innerHTML = pTwo.cash;
+    pOneLiveCash.innerHTML = "$" + pOne.cash;
+    pTwoLiveCash.innerHTML = "$" + pTwo.cash;
 }
 
 function myCows(player) {
