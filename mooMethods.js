@@ -14,6 +14,14 @@ let pTwoScore = 0;
 function updateScores() {
     pOneScore = pOne.cows + pOne.shedCows;
     pTwoScore = pTwo.cows + pTwo.shedCows;
+    let pOneLiveScore = document.getElementById("pOneLiveScore");
+    let pTwoLiveScore = document.getElementById("pTwoLiveScore");
+    let pOneLiveCash = document.getElementById("pOneLiveCash");
+    let pTwoLiveCash = document.getElementById("pTwoLiveCash");
+    pOneLiveScore.innerHTML = pOneScore;
+    pTwoLiveScore.innerHTML = pTwoScore;
+    pOneLiveCash.innerHTML = pOne.cash;
+    pTwoLiveCash.innerHTML = pTwo.cash;
 }
 
 function myCows(player) {
@@ -96,5 +104,6 @@ function endGame() {
     pTwo.temp = 0;
     pOneScore = 0;
     pTwoScore = 0;
+    updateScores();
 }
 

@@ -29,15 +29,17 @@ button {
 .scoreboard {
     display: flex;
     justify-content: space-around;
-    padding: 0px 20px;
+    padding: 0px 10px;
     color: red;
+    font-size: 30px;
 }
 
 .cash-counters {
     display: flex;
     justify-content: space-around;
-    padding: 0px 20px;
+    padding: 0px 10px;
     color: red;
+    font-size: 20px;
 }
 
 .gameboard {
