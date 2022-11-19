@@ -13,15 +13,14 @@
         <div class="header">
             Ready, Set, My Cows!
         </div>
-        <div class="player-names">
-            <h1>Player 1</h1>
-            <h1>Player 2</h1>
-        </div>
         <div class="gameboard">
             <div class="playerOneBoard">
-                <div id="pOneLiveScore">0</div>
+                <h2>Player 1</h2>
+                <div class="scoreContainer">
+                    <div id="pOneLiveScore">0</div>
+                    <div id="pOneShedCows"></div>
+                </div>
                 <div id="pOneLiveCash">$0</div>
-                <span></span>
                 <button onclick="myCows(pOne)">My Cows</button>
                 <button onclick="mySteeple(pOne)">My Steeple</button>
                 <button onclick="myGraveyard(pTwo)">My Graveyard</button>
@@ -32,9 +31,12 @@
             </div>
             <div class="divider"></div>
             <div class="playerTwoBoard">
-                <div id="pTwoLiveScore">0</div>
+                <h2>Player 2</h2>
+                <div class="scoreContainer">
+                    <div id="pTwoLiveScore">0</div>
+                    <div id="pTwoShedCows"></div>
+                </div>
                 <div id="pTwoLiveCash">$0</div>
-                <span></span>
                 <button onclick="myCows(pTwo)">My Cows</button>
                 <button onclick="mySteeple(pTwo)">My Steeple</button>
                 <button onclick="myGraveyard(pOne)">My Graveyard</button>

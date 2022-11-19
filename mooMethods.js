@@ -11,6 +11,7 @@ let pTwo = new player(0, 0, 0, 0, false, 0);
 let pOneScore = 0;
 let pTwoScore = 0;
 
+
 function updateScores() {
     pOneScore = pOne.cows + pOne.shedCows;
     pTwoScore = pTwo.cows + pTwo.shedCows;
@@ -18,10 +19,19 @@ function updateScores() {
     let pTwoLiveScore = document.getElementById("pTwoLiveScore");
     let pOneLiveCash = document.getElementById("pOneLiveCash");
     let pTwoLiveCash = document.getElementById("pTwoLiveCash");
-    pOneLiveScore.innerHTML = pOneScore;
-    pTwoLiveScore.innerHTML = pTwoScore;
+    let pOneShedCows = document.getElementById("pOneShedCows");
+    let pTwoShedCows = document.getElementById("pTwoShedCows");
+    pOneLiveScore.innerHTML = pOne.cows;
+    pTwoLiveScore.innerHTML = pTwo.cows;
     pOneLiveCash.innerHTML = "$" + pOne.cash;
     pTwoLiveCash.innerHTML = "$" + pTwo.cash;
+    if (pOne.shedCows !== 0) {
+        pOneShedCows.innerHTML = pOne.shedCows + " cows in shed";
+    } 
+    if (pTwo.shedCows !== 0) {
+        pTwoShedCows.innerHTML = pTwo.shedCows + " cows in shed";
+    } 
+
 }
 
 function myCows(player) {
@@ -104,6 +114,12 @@ function endGame() {
     pTwo.temp = 0;
     pOneScore = 0;
     pTwoScore = 0;
+
+    let pOneShedCows = document.getElementById("pOneShedCows");
+    let pTwoShedCows = document.getElementById("pTwoShedCows");
+    pOneShedCows.innerHTML = "";
+    pTwoShedCows.innerHTML = "";
+    
     updateScores();
 }
 
