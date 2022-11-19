@@ -56,3 +56,17 @@ button {
     gap: 15px;
     padding: 10px;
 }
+
+
+.endGameContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+#endGameButton {
+    padding: 20px;
+    font-size: 20px;
+}

@@ -27,21 +27,24 @@
         </div>
         <div class="gameboard">
             <div class="playerOneBoard">
-                <button id="myCows1">My Cows</button>
-                <button id="mySteeple1">My Steeple</button>
-                <button id="myGraveyard1">My Graveyard</button>
-                <button id="myGoats1">My Goats</button>
-                <button id="myDollarGeneral1">My Dollar General</button>
-                <button id="myAnimalHospital1">My Animal Hospital</button>
+                <button onclick="myCows(pOne)">My Cows</button>
+                <button onclick="mySteeple(pOne)">My Steeple</button>
+                <button onclick="myGraveyard(pTwo)">My Graveyard</button>
+                <button onclick="myGoats(pOne)">My Goats</button>
+                <button onclick="myDollarGeneral(pOne)">My Dollar General</button>
+                <button onclick="myAnimalHospital(pOne)">My Animal Hospital</button>
             </div>
             <div class="playerTwoBoard">
-                <button id="myCows2">My Cows</button>
-                <button id="mySteeple2">My Steeple</button>
-                <button id="myGraveyard2">My Graveyard</button>
-                <button id="myGoats2">My Goats</button>
-                <button id="myDollarGeneral2">My Dollar General</button>
-                <button id="myAnimalHospital2">My Animal Hospital</button>
+                <button onclick="myCows(pTwo)">My Cows</button>
+                <button onclick="mySteeple(pTwo)">My Steeple</button>
+                <button onclick="myGraveyard(pOne)">My Graveyard</button>
+                <button onclick="myGoats(pTwo)">My Goats</button>
+                <button onclick="myDollarGeneral(pTwo)">My Dollar General</button>
+                <button onclick="myAnimalHospital(pTwo)">My Animal Hospital</button>
             </div>
+        </div>
+        <div class="endGameContainer">
+            <button id="endGameButton" onclick="endGame()">End Game</button>
         </div>
     </content>
 </body>
