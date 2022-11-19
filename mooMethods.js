@@ -1,36 +1,41 @@
-let pOneCows, pOneCash, pTwoCows, pTwoCash, pOneTemp, pTwoTemp = 0;
-let pOneDead, pTwoDead = false;
-
-function myCows(playerScore, targetedPDead) {
-    playerScore++;
-    targetedPDead = true;
+function Player(cows, cash, victim, temp) {
+    this.cows = cows;
+    this.cash = cash;
+    this.victim = victim;
+    this.temp = temp;
 }
 
-function mySteeple(playerScore) {
-    playerScore = playerScore * 2;
+let playerOne = new Player(0, 0, false, 0);
+let playerTwo = new Player(0, 0, false, 0);
+
+function myCows(player) {
+    player.cows += 1;
+    player.victim = false;
 }
 
-function myGraveyard(targetedPlayerScore, targetedPlayerDead, targetedPlayerTemp) {
-    targetedPlayerTemp = targetedPlayerScore;
-    targetedPlayerScore = 0;
-    targetedPlayerDead = true;
+function mySteeple(player) {
+    player.cows *= 2;
 }
 
-function myGoats(playerScore) {
-    let temp = Math.floor(playerScore/2);
-    playerScore = playerScore + temp;
+function myGraveyard(targetedPlayer) {
+    targetedPlayer.temp = targetedPlayer.cows;
+    targetedPlayer.cows = 0;
+    targetedPlayer.victim = true;
 }
 
-function myDollarGeneral(playerCash) {
-    playerCash++;
+function myGoats(player) {
+    player.cows = Math.floor(player.cows* 1.5);
 }
 
-function myAnimalHospital(playerScore, playerDead, playerTemp) {
-    if (playerDead == false) {
-        alert ("Your cows weren't recently murdered!  Darn.")
+function myDollarGeneral(player) {
+    player.cash += 1;
+}
+
+function myAnimalHospital(player) {
+    if (player.victim === false) {
+        alert("Your cows haven't recently been murdered!  Oh well.");
     } else {
-        playerScore = playerTemp;
-        playerTemp = 0;
-        playerDead = false;
+        player.cows = player.temp;
+        player.temp = 0;
     }
 }
