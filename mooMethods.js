@@ -6,8 +6,8 @@ function player(cows, shedCows, cash, victim, temp) {
     this.temp = temp;
 }
 
-let pOne = new player(0, 0, 0, 0, false, 0);
-let pTwo = new player(0, 0, 0, 0, false, 0);
+let pOne = new player(0, 0, 0, false, 0);
+let pTwo = new player(0, 0, 0, false, 0);
 let pOneScore = 0;
 let pTwoScore = 0;
 
